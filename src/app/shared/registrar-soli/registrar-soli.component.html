@@ -1,0 +1,186 @@
+<app-navbarloged></app-navbarloged>
+<main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <mat-stepper class="example-stepper">
+
+        <mat-step>
+            <ng-template matStepLabel color="accent">Paso 1. Datos del Registro Nuevo</ng-template>
+
+            <div class="container">
+                <mat-form-field appearance="fill" class="col-5 mx-5">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-5 ms-5">
+                    <mat-label>Dirrección</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-2 mx-5">
+                    <mat-label>Miembros</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-6 mx-5">
+                    <mat-label>Tipo</mat-label>
+                    <mat-select placeholder="pat@example.com">
+                        <mat-option value="1">Organizaciones Vecinales</mat-option>
+                        <mat-option value="2">Organizaciones de Apoyo Alimentario</mat-option>
+                        <mat-option value="3">Organizaciones Temáticas</mat-option>
+                        <mat-option value="4">Organizaciones de Población Vulnerable</mat-option>
+                        <mat-option value="5">Organizaciones Económicas</mat-option>
+                        <mat-option value="6">Organizaciones Deportivas</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-5 mx-5">
+                    <mat-label required>Nivel</mat-label>
+                    <mat-select>
+                        <mat-option value="1">Primario</mat-option>
+                        <mat-option value="2">Secundario</mat-option>
+                        <mat-option value="3">Terciario</mat-option>
+                        <mat-option value="4">Cuarternario</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-5 ms-5">
+                    <mat-label>Zona</mat-label>
+                    <mat-select>
+                        <mat-option value="1">A</mat-option>
+                        <mat-option value="2">B</mat-option>
+                        <mat-option value="3">C</mat-option>
+                        <mat-option value="4">D</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <button matStepperNext class="btn btn-success mt-4" style="margin-left: 47%;">Next</button>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Paso 2. Miembros de la Junta Directiva</ng-template>
+            <div class="container">
+                <mat-form-field appearance="fill" class="col-2 me-5" color="warn">
+                    <mat-label>DNI</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-4 mx-5">
+                    <mat-label>Nombres</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-4 ms-4">
+                    <mat-label>Apellido P.</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-5 mx-5">
+                    <mat-label>Apellido M.</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="col-5 mx-4">
+                    <mat-label>Cargo</mat-label>
+                    <mat-select>
+                        <mat-option value="Presidente">Presidente</mat-option>
+                        <mat-option value="Tesorero">Tesorero</mat-option>
+                        <mat-option value="Secretario">Secretario</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="demo-button-container">
+                <button mat-raised-button (click)="addData()" class="demo-button">
+                    Add data
+                </button>
+                <button mat-raised-button [disabled]="!dataSource.length" (click)="removeData()" class="demo-button">
+                    Remove data
+                </button>
+            </div>
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-3 col-12">
+                <!-- Position Column -->
+                <ng-container matColumnDef="dni">
+                    <th mat-header-cell *matHeaderCellDef>DNI</th>
+                    <td mat-cell *matCellDef="let element">{{element.dni}}</td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="nombres">
+                    <th mat-header-cell *matHeaderCellDef>Nombres</th>
+                    <td mat-cell *matCellDef="let element">{{element.nombres}}</td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="apellidop">
+                    <th mat-header-cell *matHeaderCellDef>Apellido P.</th>
+                    <td mat-cell *matCellDef="let element">{{element.apellidop}}</td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="apellidom">
+                    <th mat-header-cell *matHeaderCellDef>Apellido M.</th>
+                    <td mat-cell *matCellDef="let element">{{element.apellidom}}</td>
+                </ng-container>
+                <ng-container matColumnDef="cargo">
+                    <th mat-header-cell *matHeaderCellDef>Cargo</th>
+                    <td mat-cell *matCellDef="let element">{{element.cargo}}</td>
+                </ng-container>
+                <ng-container matColumnDef="opciones">
+                    <th mat-header-cell *matHeaderCellDef>Opciones</th>
+                    <td mat-cell *matCellDef="let element"><button mat-raised-button [disabled]="!dataSource.length" (click)="removeData()" class="demo-button">
+                        Remove data
+                    </button></td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <button matStepperPrevious class="btn btn-primary mt-3" style="margin-left: 45%;">Back</button>
+            <button matStepperNext class="btn btn-success ms-2 mt-3">Next</button>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Paso 3. Documentos necesarios</ng-template>
+            <div class="container">
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Solicitud dirigida a la Gerencia de Participación
+                            Vecinal</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Acta de fundación o de Constitución</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Estatuto y Acta de aprobación</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Acta de elección del Órgano Directivo</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Nómina de los miembros del órgano directivo</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Nómina de los miembros de la Organización
+                            Social</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Plano o croquis referencial de la ubicación del
+                            local</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="col-6">
+                        <label for="formFile" class="form-label fw-bold">Plano o croquis del radio de acción de la
+                            organización</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+            </div>
+            <button matStepperPrevious class="btn btn-primary mt-3" style="margin-left: 45%;">Back</button>
+            <button class="btn btn-success ms-2 mt-3">Send</button>
+        </mat-step>
+    </mat-stepper>
+</main>

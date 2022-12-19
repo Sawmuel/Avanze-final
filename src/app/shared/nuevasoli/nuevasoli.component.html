@@ -1,0 +1,111 @@
+<app-navbarloged></app-navbarloged>
+
+<main>
+  <div class="header pb-7 pt-5 pt-lg-8 d-flex align-items-center"
+    style="min-height: 350px; background-image: url(https://media.discordapp.net/attachments/1042520483419148311/1042532490784538785/Grupo_48.png?width=960&height=343); background-size: cover; background-position: center top;">
+
+    <div class="container">
+      <div class="text-center" style="color: white;">
+        <h1>Nueva Solicitud</h1>
+
+        <div class="position-relative text-light">
+          <div class="d-flex position-absolute top-50 start-50 translate-middle mt-4">
+            <a [routerLink]="['/principalloged']" class="text-light text-decoration-none">Inicio</a>
+            <h6 class="mx-2">></h6>
+            <span>Crea tu Oganizacion Social</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="text-center">
+        <h1 class="fw-light">¿Listo para enviar? </h1>
+        <p class="lead text-muted">Antes de Empezar con el proceso recuerde tener descargado y rellenado los documentos
+          a subir</p>
+        <p class="lead text-muted">Si no lo tiene haga click en el bton "Ir a Documentos"</p>
+        <p>
+          <button href="#" class="btn btn-success m-2">Ir a Documentos </button>
+          <a href="#" class="btn btn-danger m-2">Ver Proceso</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top"
+              src="https://media.discordapp.net/attachments/1042520483419148311/1042535310409605140/Web_1920_21.png?width=960&height=343"
+              height="100%" width="225">
+            <div class="card-body">
+              <p class="card-text">Registrar Organización Social </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" [routerLink]="['/registrarsoli']" >Iniciar</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" [routerLink]="['/registrarsoli']"  *ngIf="usuario.rol == 'jUNTA DIRECTIVA'" >Iniciar</button>
+
+                </div>
+                <small class="text-muted">Junta directiva</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top"
+              src="https://media.discordapp.net/attachments/1042520483419148311/1042535310409605140/Web_1920_21.png?width=960&height=343"
+              height="100%" width="225">
+
+            <div class="card-body">
+              <p class="card-text">Actualizar Organización Social</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" [routerLink]="['/registrarsoli']" >Iniciar </button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" [routerLink]="['/registrarsoli']" *ngIf="usuario.rol == 'JUNTA DIRECTIVA'">Iniciar </button>
+
+                </div>
+                <small class="text-muted">Junta Directiva</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top"
+              src="https://media.discordapp.net/attachments/1042520483419148311/1042535310409605140/Web_1920_21.png?width=960&height=343"
+              height="100%" width="225">
+
+            <div class="card-body">
+              <p class="card-text">Mi Organizacion Social</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" >Ver</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" *ngIf="usuario.rol == 'JUNTA DIRECTIVA'">Ver</button>
+                </div>
+                <small class="text-muted">9 </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+</main>

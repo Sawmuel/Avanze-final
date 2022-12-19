@@ -1,0 +1,93 @@
+<app-navbarloged></app-navbarloged>
+
+
+
+<main>
+    <div class="header pb-7 pt-5 pt-lg-8 d-flex align-items-center"
+        style="min-height: 350px; background-image: url(https://media.discordapp.net/attachments/1042520483419148311/1042532490784538785/Grupo_48.png?width=960&height=343); background-size: cover; background-position: center top;">
+
+        <div class="container">
+            <div class="text-center text-light">
+                <h1>Solicitudes</h1>
+                <div class="position-relative text-light">
+                    <div class="d-flex position-absolute top-50 start-50 translate-middle mt-4">
+                        <a [routerLink]="['/principalloged']" class="text-light text-decoration-none">Inicio</a>
+                        <h6 class="mx-2">></h6>
+                        <span>Historial de Solicitudes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <br>
+        <div class="container mt-3">
+
+            <div class="search-input">
+                <div class="container">
+                    <div class="search-input-wrapper">
+                        <form>
+                            <div class="row">
+
+
+
+                                <label class="col-sm-4">Buscar:<input type="search" class="form-control form-control-sm"
+                                        placeholder="" aria-controls="Solicitudes"></label>
+
+
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="row">
+                <div class="col">
+                    <table class="table table-bordered" id="tablita">
+                        <thead>
+                            <tr>
+                                <th scope="col">N° de Solicitud</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Organizacion</th>
+                                <th scope="col">Fecha de Solicitud</th>
+                                <th scope="col">Fecha Maxima Atencion</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Observaciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+                    </table>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</main>
+<footer class="container">
+
+    <p>&copy; 2022 Geos, G1. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos y condiciones</a></p>
+</footer>

@@ -1,0 +1,39 @@
+<!-- <span *ngIf="data_authority == 1">Cargando datos...</span>
+<span *ngIf="data_authority == 2">{{ data_categorias | json}}</span>
+<span *ngIf="data_authority == 0">No tienes acceso a los datos...</span> -->
+
+
+<div class="container_categorias">
+    <h2>Tabla de categorias</h2>
+
+
+    <!-- REGISTRAR CATEGORIA -->
+    <div class="content_inputs" *ngIf="ocultar_registrar">
+        <input type="text" placeholder="Nombre de la categoria" [(ngModel)]="categoria.nombre_categoria">
+        <button mat-raised-button color="primary" (click)="registrarCategoria()">Registrar categoria</button>
+    </div>
+
+    <!-- UPDATE CATEGORIA -->
+    <div class="content_inputs" *ngIf="!ocultar_registrar">
+        <input type="text" placeholder="Nombre de la categoria" [(ngModel)]="update_categoria.nombre_categoria">
+        <button mat-raised-button color="primary" (click)="updateCategoria()">Actualizar categoria</button>
+    </div>
+
+
+    <table id="customers">
+        <tr>
+          <th>Nro°</th>
+          <th>Nombre de categoria</th>
+          <th>Acciones</th>
+        </tr>
+        <tr *ngFor="let categoria of data_categorias; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ categoria.nombre_categoria }}</td>
+          <td>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" (click)="mostrarUpdateCategoria(categoria)"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" (click)="deleteCategoria(categoria.id_categoria)" class="icon_delete"></mat-icon>
+          </td>
+        </tr>
+      </table>
+
+</div>

@@ -1,0 +1,139 @@
+<app-navbarprin></app-navbarprin>
+<main>
+    <div class="header pb-7 pt-5 pt-lg-8 d-flex align-items-center"
+        style="min-height: 350px; background-image: url(https://media.discordapp.net/attachments/1042520483419148311/1042532490784538785/Grupo_48.png?width=960&height=343); background-size: cover; background-position: center top;">
+
+        <div class="container">
+            <div class="text-center text-light">
+                <h1>Organizaciones</h1>
+
+                <div class="position-relative text-light">
+                    <div class="d-flex position-absolute top-50 start-50 translate-middle mt-4">
+                        <a [routerLink]="['/principalloged']" class="text-light text-decoration-none">Inicio</a>
+                        <h6 class="mx-2">></h6>
+                        <span>Organizaciones Registradas</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <main id="main">
+        <section class="about " id="pasos">
+
+            <div class="search-input">
+                <div class="container">
+                    <div class="search-input-wrapper">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h5 style="font-weight: bold; color: #000000; text-transform: uppercase;">
+                                        Búsqueda por tipo de organización</h5>
+                                    <select class="form-control obj_tipo" id="obj_tipo" name="obj_tipo">
+                                        <option value="">Todos</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <h5 style="font-weight: bold; color: #000000; text-transform: uppercase;">
+                                        Búsqueda por año</h5>
+                                    <select class="form-control obj_anio" id="obj_anio" name="obj_anio">
+                                        <option value="">Todos</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <h5 style="font-weight: bold; color: #000000; text-transform: uppercase;">
+                                        Búsqueda por lugar</h5>
+                                    <select class="form-control obj_distrito" id="obj_distrito" name="obj_distrito">
+                                        <option value="">Todos</option>
+
+                                    </select>
+                                </div>
+
+
+                                <div class="col-sm-2">
+                                    <h5 style="color: #ebebeb;"> __</h5>
+                                    <a th:href="@{/libro/exportarExcel}" class="btn btn-success mb-4"
+                                        sec:authorize="hasRole('ROLE_ADMIN')">
+                                        <strong class="me-2">Buscar</strong>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- End About Section -->
+
+        <div>
+            <br>
+            <div class="container mt-3">
+
+                <a th:href="@{/libro/exportarPDF}" class="btn btn-secondary mb-4" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <strong class="me-2">Exportar a PDF</strong>
+                </a>
+                <a th:href="@{/libro/exportarExcel}" class="btn btn-success mb-4" sec:authorize="hasRole('ROLE_ADMIN')">
+                    <strong class="me-2">Exportar a Excel</strong>
+                </a>
+                <div class="row">
+                    <div class="col">
+                        <table class="table table-bordered" id="tablita">
+                            <thead>
+                                <tr>
+                                    <th scope="col">N°</th>
+                                    <th scope="col">CODIGO DE ORGANIZACION</th>
+                                    <th scope="col">NOMBRE DE ORGANIZACION</th>
+
+                                    <th scope="col">LUGAR</th>
+                                    <th scope="col">INICIO DE VIGENCIA</th>
+                                    <th scope="col">FIN DE VIGENCIA</th>
+                                    <th scope="col">TIPO DE ORGANIZACION</th>
+                                    <th scope="col">RESOLUCION DE LA ORGANIZACION</th>
+                                    <th scope="col">DESCARGAR RESOLUCION</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>000-203</td>
+                                    <td>Vaso de leche</td>
+                                    <td>Ñaña</td>
+                                    <td>20/03/2019</td>
+                                    <td>24/04/2026</td>
+                                    <td>Organizacion Vecinal </td>
+                                    <td>Resolucion.pdf.word</td>
+                                    <td>Icono.jpg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+</main>
+<footer class="container">
+
+    <p>&copy; 2022 Geos, G1. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos y condiciones</a></p>
+</footer>

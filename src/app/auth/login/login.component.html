@@ -1,0 +1,39 @@
+<main class="asd">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="content_login">
+            <img class=""
+                src="https://media.discordapp.net/attachments/984970824282955818/994423074449539172/unknown.png" alt=""
+                width="122" height="82">
+            <h1>Ingreso </h1>
+            <mat-form-field appearance="fill"  class="example-full-width">
+                <mat-label>DNI</mat-label>
+                <input matInput placeholder="Ingrese su DNI" type="text" autocomplete="off"
+                    [(ngModel)]="usuario.username">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="usuario.password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <div class="mb-3" style="text-align: left; ">
+                <br>
+                <a class="text-success" [routerLink]="['/registrouser']">¿No tienes cuenta?</a>
+            </div>
+            <button mat-raised-button style="background-color: green; color: white;" (click)="iniciarSesion()">Iniciar
+                Sesión</button>
+        </div>
+    </div>
+
+</main>
