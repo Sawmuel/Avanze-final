@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro-user.component.css']
 })
 export class RegistroUserComponent implements OnInit {
-
+  hide = true;
   constructor() { }
 
   ngOnInit(): void {

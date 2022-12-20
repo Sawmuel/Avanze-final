@@ -6,13 +6,13 @@
     <br>
     <br>
     <br>
-    <div class="container">
+    <div class="container contain">
         <div class="content_login">
             <img class=""
                 src="https://media.discordapp.net/attachments/984970824282955818/994423074449539172/unknown.png" alt=""
-                width="122" height="82">
+                width="40%">
             <h1>Ingreso </h1>
-            <mat-form-field appearance="fill"  class="example-full-width">
+            <mat-form-field appearance="fill" class="example-full-width">
                 <mat-label>DNI</mat-label>
                 <input matInput placeholder="Ingrese su DNI" type="text" autocomplete="off"
                     [(ngModel)]="usuario.username">
@@ -31,9 +31,198 @@
                 <br>
                 <a class="text-success" [routerLink]="['/registrouser']">¿No tienes cuenta?</a>
             </div>
-            <button mat-raised-button style="background-color: green; color: white;" (click)="iniciarSesion()">Iniciar
+            <button mat-raised-button style="background-color: green; color: white;" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Iniciar
                 Sesión</button>
         </div>
-    </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center fw-bold fs-2">Términos y Condiciones de uso del Sitio Web</p>
+                        <p class="fw-semibold fs-4">Condiciones de uso</p>
+                        <p>Por medio de estos Términos y Condiciones de Uso, el Patrimonio en Fideicomiso - D. Leg. 861,
+                            Titulo XI,
+                            CPR, Asociación Civil San Juan Bautista y/o Administradora de Servicios Funerarios S.A.C,
+                            informan a los
+                            usuarios de la página Web de (www.parquedelrecuerdo.org) el uso adecuado de esta página,
+                            cuya
+                            utilización estará sujeta a los presentes Términos y Condiciones Generales de Uso.</p>
+                        <p>Estos Términos y Condiciones están dirigidos para usuarios, los cuales se entienden como
+                            clientes,
+                            personal de la Institución y público en general. El usuario que accede a esta página y hace
+                            uso de la
+                            misma implica que acepta expresamente los Términos y Condiciones generales. En caso de no
+                            aceptarlos, se
+                            le solicita que no haga uso, ni acceda, ni manipule la información de los servicios
+                            ofrecidos por el
+                            Sitio Web, ya que usted (usuario) está haciendo un uso inadecuado de éste.</p>
+                        <p>El propósito del Sitio Web es la de atender solicitudes de misas, rosarios y oraciones,
+                            consultas y
+                            citas, solicitudes dentro de bolsas laborales de la institución, las consultas y
+                            cotizaciones, ofrecer
+                            servicios, pagos, publicidad, ofertas, emisión de comprobantes, recepcionar y atender quejas
+                            y/o
+                            reclamos, realizar gestiones administrativas, analítica de datos y procesamiento de datos y
+                            demás
+                            solicitudes relacionadas con los servicios y productos que brindamos.</p>
+                        <p class="fw-bold">Aceptación de Términos y Condiciones</p>
+                        <p>Los Sitios Web y referencias están disponibles para que el usuario bajo su responsabilidad
+                            los utilice
+                            adecuadamente sin aprovecharse de alguna falla que ocurra y saque provecho de la misma. Si
+                            encuentra
+                            alguna falla en nuestro Sitio Web agradeceremos pueda reportarla a
+                            soporteonline@parquedelrecuerdo.org.
+                        </p>
+                        <p>Los cambios y actualizaciones en los Términos y Condiciones de uso serán comunicados en
+                            nuestro Sitio Web
+                            oportunamente para que todos los usuarios se informen de los Términos y Condiciones de uso
+                            vigentes.
+                            Está bajo la responsabilidad del usuario enterarse de los nuevos cambios y restringirse a
+                            cumplir con
+                            los mismos como normativa del Sitio Web.</p>
+                        <p>La información de los eventos institucionales será de carácter público para todos los
+                            usuarios en el
+                            Sitio Web, mientras los vínculos que soliciten el registro del usuario estarán restringidos
+                            para todo
+                            usuario que no esté autenticado, este último será responsable del uso adecuado o no del
+                            manejo de la
+                            información. En caso incumpla, el administrador del sitio web desactivará su cuenta de
+                            usuario y
+                            recibirá una notificación sobre el uso inadecuado de la información en el Sitio Web.</p>
+                        <p>Queda prohibido el uso del nombre, logotipos, marcas, diseños o cualquier signo distintivo de
+                            autoría,
+                            propiedad y/o titularidad del Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR,
+                            Asociación Civil
+                            San Juan Bautista y/o Administradora de Servicios Funerarios S.A.C, así como enlaces de
+                            hipertexto o
+                            hipervínculos a páginas no controladas por ésta, sin su previa y expresa autorización.</p>
+                        <p>Se prohíbe igualmente incluir en sitios y portales no controlados por el Patrimonio en
+                            Fideicomiso - D.
+                            Leg. 861, Titulo XI, CPR, Asociación Civil San Juan Bautista y/o Administradora de Servicios
+                            Funerarios
+                            S.A.C enlaces o páginas interiores, evitando así no visitar la página principal. Se prohíbe
+                            igualmente
+                            el despliegue, exhibición o reproducción del Sitio Web o de cualquiera de sus subdirectorios
+                            o páginas
+                            secundarias, en sitios o portales no controlados por el Patrimonio en Fideicomiso - D. Leg.
+                            861, Titulo
+                            XI, CPR, Asociación Civil San Juan Bautista y/o Administradora de Servicios Funerarios
+                            S.A.C.</p>
+                        <p>El usuario se compromete a usar de forma diligente y lícita los contenidos informativos y
+                            boletines del
+                            Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan Bautista
+                            y/o
+                            Administradora de Servicios Funerarios S.A.C, solo con fines informativos y sin reproducir,
+                            copiar o
+                            distribuir información que no sea pública de otros enlaces que no incluya las referencias al
+                            portal del
+                            Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan Bautista
+                            y/o
+                            Administradora de Servicios Funerarios S.A.C.</p>
+                        <p class="fw-bold">Obligaciones de los usuarios en general</p>
+                        <p>
+                            <li>El usuario se obliga a utilizar los servicios y contenidos que le proporciona el Sitio
+                                Web conforme
+                                a la legislación vigente y a los principios de buena fe y usos generalmente aceptados y
+                                a no
+                                contravenir con su actuación a través de la Sitio Web.</li>
+                            <li>El usuario se compromete a suministrar información verdadera y exacta acerca de él mismo
+                                en los
+                                formularios en los que sea necesario el registro del Sitio Web que el usuario decida
+                                hacer uso.</li>
+                        </p>
+                        <p class="fw-bold">Modificaciones a los Términos y Condiciones</p>
+                        <p>El Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan
+                            Bautista y/o
+                            Administradora de Servicios Funerarios S.A.C se reserva el derecho de modificar el contenido
+                            y alcance
+                            de los presentes Términos y Condiciones en cualquier momento y según lo considere necesario.
+                            El usuario
+                            estará obligado a sujetarse a dichas modificaciones, una vez que éstas entren en vigor.</p>
+                        <p class="fw-bold">Delimitación de responsabilidad</p>
+                        <p>El Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan
+                            Bautista y/o
+                            Administradora de Servicios Funerarios S.A.C realiza los mayores esfuerzos para brindar la
+                            más
+                            actualizada y exacta información en este Sitio Web. Sin perjuicio de lo anterior, en algunas
+                            oportunidades puede incurrir en errores o en omisiones. En tales circunstancias el
+                            Patrimonio en
+                            Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan Bautista y/o
+                            Administradora de
+                            Servicios Funerarios S.A.C no será responsable del daño, perjuicio directo, indirecto,
+                            incidental,
+                            consecuente o especial que se derive del uso de la información contenida en este Sitio Web o
+                            de las
+                            páginas web aquí recomendadas.</p>
+                        <p>Toda la información que es publicada en este Sitio Web, la cual incluye, pero no se limita, a
+                            los
+                            gráficos, textos y referencias a otras páginas, se proporciona "como es" y está sujeta a
+                            posibles
+                            modificaciones sin aviso previo. La información a la que se hace referencia es proporcionada
+                            sin
+                            garantía de cualquier clase, expresa o implícita.</p>
+                        <p>El Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan
+                            Bautista y/o
+                            Administradora de Servicios Funerarios S.A.C no garantiza, en ningún caso, la suficiencia,
+                            exactitud e
+                            integridad de la información contenida en este Sitio Web o en las páginas web recomendadas
+                            por lo que no
+                            asumirá ninguna clase de responsabilidad por los errores o las omisiones en las que pudiera
+                            incurrir.
+                            Los visitantes son enteramente responsables de verificar y evaluar la exactitud, integridad
+                            y la
+                            utilidad de cualquier información que se encuentre disponible desde este Sitio Web.</p>
+                        <p>El Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan
+                            Bautista y/o
+                            Administradora de Servicios Funerarios S.A.C no garantiza un servicio libre e interrumpido
+                            de esta
+                            página, pero sí declara su voluntad de efectuar los esfuerzos que, dentro de lo razonables,
+                            permitan
+                            alcanzar su disponibilidad por el mayor tiempo posible.</p>
+                        <p class="fw-bold">Terminación de Acceso</p>
+                        <p>El Patrimonio en Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan
+                            Bautista y/o
+                            Administradora de Servicios Funerarios S.A.C, podrá, en cualquier momento, terminar o
+                            suspender el
+                            acceso que el usuario tenga a todo o parte del Sitio Web sin aviso previo y sin
+                            responsabilidad alguna,
+                            por cualquier conducta del usuario que el Patrimonio en Fideicomiso - D. Leg. 861, Titulo
+                            XI, CPR,
+                            Asociación Civil San Juan Bautista y/o Administradora de Servicios Funerarios S.A.C, a su
+                            criterio
+                            considere que ha violado estos Términos y Condiciones. Sin perjuicio de ello, el Patrimonio
+                            en
+                            Fideicomiso - D. Leg. 861, Titulo XI, CPR, Asociación Civil San Juan Bautista y/o
+                            Administradora de
+                            Servicios Funerarios S.A.C, en cualquier momento, sin invocación de causa y sin previo
+                            aviso, podrá
+                            suspender o terminar el acceso que el usuario tenga a todo o parte de este Sitio Web, sin
+                            que por tal
+                            hecho se genere derecho a reclamo o indemnización alguna a favor del usuario.</p>
+                        <p>Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de la
+                            República del
+                            Perú. Cualquier controversia que surja de la aplicación de los presentes Términos y
+                            Condiciones se
+                            entablara exclusivamente en los Tribunales de la República del Perú.</p>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones</label>
+                            </div>
 
+                    </div>
+                    <form class="modal-footer" #f="ngForm">
+                        
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="iniciarSesion()" [disabled]="!f.valid" btn-block
+                            data-bs-dismiss="modal">Acepto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>

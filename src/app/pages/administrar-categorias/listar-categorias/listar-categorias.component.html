@@ -4,26 +4,26 @@
 
 
 <div class="container_categorias">
-    <h2>Tabla de categorias</h2>
+    <h2>Tabla de Privilegios</h2>
 
 
     <!-- REGISTRAR CATEGORIA -->
     <div class="content_inputs" *ngIf="ocultar_registrar">
-        <input type="text" placeholder="Nombre de la categoria" [(ngModel)]="categoria.nombre_categoria">
-        <button mat-raised-button color="primary" (click)="registrarCategoria()">Registrar categoria</button>
+        <input type="text" placeholder="Nombre de la privilegio" [(ngModel)]="categoria.nombre_categoria">
+        <button mat-raised-button color="primary" (click)="registrarCategoria()">Registrar privilegio</button>
     </div>
 
     <!-- UPDATE CATEGORIA -->
     <div class="content_inputs" *ngIf="!ocultar_registrar">
-        <input type="text" placeholder="Nombre de la categoria" [(ngModel)]="update_categoria.nombre_categoria">
-        <button mat-raised-button color="primary" (click)="updateCategoria()">Actualizar categoria</button>
+        <input type="text" placeholder="Nombre de la privilegio" [(ngModel)]="update_categoria.nombre_categoria">
+        <button mat-raised-button color="primary" (click)="updateCategoria()">Actualizar privilegio</button>
     </div>
 
 
     <table id="customers">
         <tr>
           <th>Nro°</th>
-          <th>Nombre de categoria</th>
+          <th>Nombre del privilegio</th>
           <th>Acciones</th>
         </tr>
         <tr *ngFor="let categoria of data_categorias; let i = index">

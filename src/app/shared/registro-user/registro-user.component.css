@@ -8,18 +8,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 
 
-#asd {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-top: 210px;
-    padding-bottom: 40px;
-    background-image: url("https://media.discordapp.net/attachments/984970824282955818/994419070436904980/unknown.png");
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-}
 
 .form-signin {
     width: 100%;
@@ -27,6 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     padding: 15px;
     margin: auto;
     background-color: white;
+    
 }
 .form-registro {
     width: 100%;
@@ -34,6 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     padding: 15px;
     margin: auto;
     background-color: white;
+    border-radius: 20px;
 }
 .form-signin .checkbox {
     font-weight: 400;

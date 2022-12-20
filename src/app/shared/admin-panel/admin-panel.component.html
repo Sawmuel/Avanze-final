@@ -16,7 +16,7 @@
                     <span>{{ usuario.nombre }}</span>
                 </div>
                 <i class="fa-light fa-pipe fa-lg ms-1"></i>
-                <img class="mx-1" src="https://i.ibb.co/3k4cN4z/rhaenyra.jpg">
+                <img class="mx-1" src="https://media.discordapp.net/attachments/984970824282955818/1054443463858462761/free-user-group-icon-296-thumb.png">
                 <div class="dropdown-content">
                     <a class="content_actions">
                         <i class="fa-solid fa-user"></i>
@@ -41,67 +41,57 @@
                 <hr>
                 <li class="nav-item fs-light" *ngIf="usuario.rol == 'ADMIN'">
                     <a routerLink="administrar-categorias" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-mug-hot"></i>
-                        <span>Administrar categorias</span>
-                    </a>
-                    <hr class="hr_divide">
+                        <span>Administrar privilegio</span>
+                    </a>                 
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'USER'">
                     <a routerLink="administrar-productos" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Administrar productos</span>
                     </a>
-                    <hr class="hr_divide">
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'ADMIN'">
                     <a routerLink="cuentas" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Cuentas</span>
                     </a>
-                    <hr class="hr_divide" />
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'ADMIN'">
                     <a routerLink="requisitos" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Requisitos</span>
                     </a>
-                    <hr class="hr_divide" />
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'ADMIN'">
                     <a routerLink="parametros" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Parámetros</span>
                     </a>
-                    <hr class="hr_divide" />
                 </li>
-                <li class="nav-item" *ngIf="usuario.rol == 'MEPA'">
+                <li class="nav-item" *ngIf="usuario.rol == 'Mesa de Partes'">
                     <a routerLink="solicitudes" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Solicitudes</span>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="usuario.rol == 'MEPA'">
+                <li class="nav-item" *ngIf="usuario.rol == 'Mesa de Partes'">
                     <a routerLink="expedientes" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Expedientes</span>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'Sub Gerencia de Participacion Vecinal'">
                     <a routerLink="expedientesgpv" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Expedientes</span>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'Sub Gerencia de Participacion Vecinal'">
                     <a routerLink="requisitosgpv" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Requisitos</span>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'Gerencia de Desarrollo Social'">
                     <a routerLink="organizaciones" routerLinkActive="active-link" class="group_items">
-                        <i class="fa-solid fa-cart-shopping"></i>
                         <span>Organizaciones</span>
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="usuario.rol == 'Gerencia de Desarrollo Social'">
+                    <a routerLink="requisitosgpv" routerLinkActive="active-link" class="group_items">
+                        <span>Requisitos</span>
                     </a>
                 </li>
                 <!-- <li class="nav-item" *ngFor="let opciones of opciones_child">
