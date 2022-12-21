@@ -7,7 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { CredencialComponent } from './credencial/credencial.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AdministrarProductosModule,
     MatTableModule,
     MatPaginatorModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDialogModule,
   ]
 })
 export class PagesModule { }
