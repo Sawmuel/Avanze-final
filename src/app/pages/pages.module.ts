@@ -5,11 +5,14 @@ import { AdministrarProductosModule } from './administrar-productos/administrar-
 import { PrincipalComponent } from './principal/principal.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CredencialComponent } from './credencial/credencial.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
   declarations: [
-    PrincipalComponent
+    PrincipalComponent,
+    CredencialComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +20,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     AdministrarProductosModule,
     MatTableModule,
     MatPaginatorModule,
+    MatFormFieldModule
   ]
 })
 export class PagesModule { }

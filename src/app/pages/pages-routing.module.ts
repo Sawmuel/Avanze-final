@@ -16,6 +16,9 @@ import { EspedientesgpvComponent } from './espedientesgpv/espedientesgpv.compone
 import { RequisitosgpvComponent } from './requisitosgpv/requisitosgpv.component';
 import { OrganizacionesComponent } from './organizaciones/organizaciones.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { RequisitosComponent } from './requisitos/requisitos.component';
+import { ParametrosComponent } from './parametros/parametros.component';
+import { CredencialComponent } from './credencial/credencial.component';
 
 const routes: Routes = [
     { path: 'login', canActivate: [LoginGuard], component: LoginComponent },
@@ -33,7 +36,10 @@ const routes: Routes = [
             { path: 'expedientesgpv', component: EspedientesgpvComponent},
             { path: 'requisitosgpv', component: RequisitosgpvComponent},
             { path: 'organizaciones', component: OrganizacionesComponent},
-            { path: 'principal', component: PrincipalComponent},            
+            { path: 'principal', component: PrincipalComponent},
+            { path: 'requisitos', component: RequisitosComponent},
+            { path: 'parametros', component: ParametrosComponent},
+            { path: 'credencial', component: CredencialComponent}          
         ],
     },
     /*{path: 'navbar-dos', canActivate: [navbardosGuard], component: NavbarlogedComponent}*/

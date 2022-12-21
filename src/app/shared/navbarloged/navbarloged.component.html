@@ -30,7 +30,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="usuario.rol == 'USER'">
               Solicitudes
             </a>
             <ul class="dropdown-menu">
@@ -54,7 +54,7 @@
       <div class="content_right dropdown">
         <div class="app_foto_user ">
           <img class="mx-1" src="https://i.ibb.co/3k4cN4z/rhaenyra.jpg">
-          <div class="dropdown-content" style="margin-top: 71%;">
+          <div class="dropdown-content" style="margin-top: 94%;">
             <a class="content_actions">
               <i class="fa-solid fa-user"></i>
               <span>Perfil</span>
