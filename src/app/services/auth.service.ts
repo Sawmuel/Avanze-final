@@ -16,6 +16,13 @@ export class AuthService {
     return this.http.post("http://localhost:8090/api/login", usuario, {observe: 'response'});
   }
 
+  getCategorias(){
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    })
+    return this.http.get("http://localhost:8090/api/categoria/get-all", { headers: headers });
+  }
+
   getPayloadToken(token: string){
     let payload = JSON.parse(atob(token.split(".")[1]));
     delete payload.sub;

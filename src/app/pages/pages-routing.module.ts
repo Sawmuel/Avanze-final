@@ -15,6 +15,7 @@ import { ExpedientesComponent } from './expedientes/expedientes.component';
 import { EspedientesgpvComponent } from './espedientesgpv/espedientesgpv.component';
 import { RequisitosgpvComponent } from './requisitosgpv/requisitosgpv.component';
 import { OrganizacionesComponent } from './organizaciones/organizaciones.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
     { path: 'login', canActivate: [LoginGuard], component: LoginComponent },
@@ -24,14 +25,15 @@ const routes: Routes = [
         component: AdminPanelComponent,
         
         children: [
-            { path: 'administrar-categorias', component: ListarCategoriasComponent,  },
-            { path: 'administrar-productos', component: ListarProductosComponent, },
+            { path: 'administrar-categorias', component: ListarCategoriasComponent},
+            { path: 'administrar-productos', component: ListarProductosComponent},
             { path: 'cuentas', component: CuentasComponent },
             { path: 'solicitudes', component: SolicitudesComponent },
             { path: 'expedientes', component: ExpedientesComponent },
             { path: 'expedientesgpv', component: EspedientesgpvComponent},
             { path: 'requisitosgpv', component: RequisitosgpvComponent},
-            { path: 'organizaciones', component: OrganizacionesComponent},            
+            { path: 'organizaciones', component: OrganizacionesComponent},
+            { path: 'principal', component: PrincipalComponent},            
         ],
     },
     /*{path: 'navbar-dos', canActivate: [navbardosGuard], component: NavbarlogedComponent}*/

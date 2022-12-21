@@ -17,16 +17,16 @@
             <a class="nav-link " aria-current="page" [routerLink]="['/principalloged']">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/admin-panel']" *ngIf="usuario.rol == 'ADMIN'">Gestion Interna</a>
+            <a class="nav-link" routerLink="/admin-panel/principal" *ngIf="usuario.rol == 'ADMIN'">Gestion Interna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/admin-panel']" *ngIf="usuario.rol == 'MEPA'">Gestion Interna</a>
+            <a class="nav-link" routerLink="/admin-panel/principal" *ngIf="usuario.rol == 'Mesa de Partes'">Gestion Interna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/admin-panel']" *ngIf="usuario.rol == 'Sub Gerencia de Participacion Vecinal'">Gestion Interna</a>
+            <a class="nav-link" routerLink="/admin-panel/principal" *ngIf="usuario.rol == 'Sub Gerencia de Participacion Vecinal'">Gestion Interna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/admin-panel']" *ngIf="usuario.rol == 'Gerencia de Desarrollo Social'">Gestion Interna</a>
+            <a class="nav-link" routerLink="/admin-panel/principal" *ngIf="usuario.rol == 'Gerencia de Desarrollo Social'">Gestion Interna</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -54,7 +54,7 @@
       <div class="content_right dropdown">
         <div class="app_foto_user ">
           <img class="mx-1" src="https://i.ibb.co/3k4cN4z/rhaenyra.jpg">
-          <div class="dropdown-content">
+          <div class="dropdown-content" style="margin-top: 71%;">
             <a class="content_actions">
               <i class="fa-solid fa-user"></i>
               <span>Perfil</span>

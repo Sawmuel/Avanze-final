@@ -9,6 +9,10 @@ import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatStepperModule } from '@angular/material/stepper';
+import {MatRippleModule} from '@angular/material/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -24,6 +28,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     PagesModule,
     AuthModule,
     MatStepperModule,
+    MatRippleModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

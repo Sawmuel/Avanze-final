@@ -14,14 +14,17 @@ export class LoginComponent implements OnInit {
 
   usuario: Usuario = new Usuario();
 
+  desactiva = true;
+
   hide = true;
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  iniciarSesion(){
-    
+
+  iniciarSesion() {
+
 
     this.authService.login(this.usuario).subscribe({
       next: (resp: any) => {
@@ -45,11 +48,8 @@ export class LoginComponent implements OnInit {
           'Credenciales incorrectas..!',
           'error'
         )
-        
+
       }
     })
-
   }
-  
-
 }

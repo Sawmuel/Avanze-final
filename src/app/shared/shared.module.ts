@@ -19,6 +19,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {MatTableModule} from '@angular/material/table';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule,
   ],
   exports: [
     AdminPanelComponent,
