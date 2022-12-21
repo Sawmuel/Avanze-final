@@ -39,11 +39,6 @@
 
                 <span class="fw-bold text-center fs-5 mt-2 text-light">{{ usuario.rol }}</span>
                 <hr>
-                <li class="nav-item fs-light" *ngIf="usuario.rol == 'ADMIN'">
-                    <a routerLink="administrar-categorias" routerLinkActive="active-link" class="group_items">
-                        <span>Administrar privilegio</span>
-                    </a>                 
-                </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'USER'">
                     <a routerLink="administrar-productos" routerLinkActive="active-link" class="group_items">
                         <span>Administrar productos</span>
@@ -59,9 +54,19 @@
                         <span>Requisitos</span>
                     </a>
                 </li>
+                <li class="nav-item fs-light" *ngIf="usuario.rol == 'ADMIN'">
+                    <a routerLink="administrar-categorias" routerLinkActive="active-link" class="group_items">
+                        <span>Privilegios</span>
+                    </a>                 
+                </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'ADMIN'">
                     <a routerLink="parametros" routerLinkActive="active-link" class="group_items">
                         <span>Parámetros</span>
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="usuario.rol == 'ADMIN'">
+                    <a routerLink="credencial" routerLinkActive="active-link" class="group_items">
+                        <span>Credenciales</span>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="usuario.rol == 'Mesa de Partes'">
